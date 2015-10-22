@@ -1,0 +1,22 @@
+private boolean okToStartNewActionUnit() {
+		if(_actionStack.size() < 1) {
+			return true;
+		}
+		
+		/*
+		 * I thought this section of code was the right algorithm; turned
+		 * out it wasn't so, so I commented it out, but didn't delete it 
+		 * just yet...
+		 * 
+		 * Actually, it seems, from the content of this method, that only a
+		 * return true is needed, or the method is not needed at all; but I left it
+		 * here for design extensibility purposes, just in case...
+		 */
+		//		String action1 = getLastActionUnit().getAction();
+		//		String action2 = _currentAction;		
+		//		if(action1 == action2) {
+		//			return false;
+		//		}
+
+		return true;
+	}

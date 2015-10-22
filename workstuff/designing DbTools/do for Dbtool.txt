@@ -1,0 +1,23 @@
+#Dbtool(s)
+===========================
+
+-> understand what it means to upgrade an sqlite db
+-> understand how an alter query command would work and how to apply it to Dbtool
+-> how to create class or resource links in javadoc??
+-> how to export javadoc
+
+-> read about throwing exceptions and how and when to use them.
+-> re-include the table(...) methods for Dbtool and DbtoolActionUnit... ?
+
+
+#handled?
+-> rework the logic for createDb(), to cater for when the database already exists. 
+e.g. if the user calls createDb(dbname, actionOnCreate), and the database is already 
+existing, what should become of the actionOnCreate, since this is intended to 
+represent an action that should be run when the database is created. ideally, if the 
+database exists, and user calls createDb(dbname, actionOnCreate), it's actionOnOpen that 
+should be run instead... so how do you apply this new direction?...
+
+
+#uncertain?
+-> re-include the insert() method, but make private for internal use?

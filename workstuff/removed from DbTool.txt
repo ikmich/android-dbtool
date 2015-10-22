@@ -1,0 +1,42 @@
+/**
+	 * Creates an sqlite database and executes a Runnable action when the
+	 * database is created.
+	 * 
+	 * @param dbName
+	 *            <span>The database name.</span>
+	 * @param actionOnCreate
+	 *            <span>A Runnable action to execute when the database is
+	 *            created.</span>
+	 * @return The SQLiteDatabase object.
+	 * @throws SQLiteException
+	 */
+	public SQLiteDatabase createDb(String dbName, Runnable actionOnCreate)
+			throws SQLiteException {
+		return createOrOpenDatabase(dbName, actionOnCreate);
+	}
+
+
+	/**
+	 * Creates an sqlite database and executes corresponding actions when the
+	 * database is created, opened, and updated respectively.
+	 * 
+	 * @param dbName
+	 *            <span>The database name.</span>
+	 * @param actionOnCreate
+	 *            <span>A Runnable action to execute when the database is
+	 *            created.</span>
+	 * @param actionOnOpen
+	 *            <span>A Runnable action to execute when the database is
+	 *            opened.</span>
+	 * @param actionOnUpdate
+	 *            <span>A Runnable action to execute when the database is
+	 *            updated.</span>
+	 * @return The SQLiteDatabase object.
+	 * @throws SQLiteException
+	 */
+	public SQLiteDatabase createDb(String dbName, Runnable actionOnCreate,
+			Runnable actionOnOpen, Runnable actionOnUpdate)
+			throws SQLiteException {
+		return createOrOpenDatabase(dbName, actionOnCreate, actionOnOpen,
+				actionOnUpdate);
+	}

@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
+		http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<!-- android-dbtool -->
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>cog.android</groupId>
+	<artifactId>android-dbtool</artifactId>
+	<version>1.0.1</version>
+	<packaging>jar</packaging>
+	<name>Cog Android Dbtool</name>
+	<description>
+		
+	</description>
+
+	<properties>
+		<path.androidJar>C:\android_sdk_android_studio\platforms\android-22\android.jar</path.androidJar>
+	</properties>
+
+	<dependencies>
+		<!-- Android sdk library (local file) -->
+		<dependency>
+			<groupId>android</groupId>
+			<artifactId>android</artifactId>
+			<version>22.0.0</version>
+			<scope>system</scope>
+			<systemPath>${path.androidJar}</systemPath>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<!-- Configure maven javac compiler version -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<!-- <version>3.1</version> -->
+					<configuration>
+						<source>1.7</source>
+						<target>1.7</target>
+					</configuration>
+				</plugin>
+
+				<!-- Plugin to attach javadoc -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-javadoc-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>attach-javadocs</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+
+				<!-- Plugin to attach sources -->
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-source-plugin</artifactId>
+					<executions>
+						<execution>
+							<id>attach-sources</id>
+							<goals>
+								<goal>jar</goal>
+							</goals>
+						</execution>
+					</executions>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+	<developers>
+		<developer>
+			<id>ikmich</id>
+			<name>Ik Michael</name>
+			<email>michfx@gmail.com</email>
+			<properties>
+				<active>true</active>
+			</properties>
+		</developer>
+	</developers>
+</project>

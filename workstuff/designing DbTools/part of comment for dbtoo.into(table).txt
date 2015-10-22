@@ -1,0 +1,5 @@
+ It is expected
+	 * that insert(values) has been called earlier in the Dbtool methods call
+	 * chain. i.e. <b>dbtool.into(tablename).insert(values).run()</b> is wrong
+	 * and may cause an error or just not do anything.
+	 * <b>dbtool.insert(values).into(tablename).run()</b> is right.

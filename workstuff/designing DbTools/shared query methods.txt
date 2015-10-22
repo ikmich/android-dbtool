@@ -1,0 +1,49 @@
+#Query class
+-> from(table)
+-> table(table)
+-> set(name, value)
+-> where(conds)
+-> having()
+-> groupBy()
+-> orderBy()
+-> distinct()
+
+#get(cols)
+#getAll()
+-> SELECT
+
+#distinct()
+-> SELECT
+
+#from(table)
+-> SELECT
+-> DELETE
+
+#table(table)
+-> UPDATE
+-> INSERT
+
+#insertInto(table)
+#into(table)
+-> INSERT
+
+#update(table)
+-> UPDATE
+
+#set(name, value)
+-> INSERT
+-> UPDATE
+
+#delete()
+#deleteFrom(table)
+-> DELETE
+
+#where(conds)
+-> SELECT
+-> INSERT
+-> UPDATE
+-> DELETE
+
+#columns(columns)
+-> UPDATE
+-> 

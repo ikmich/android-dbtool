@@ -1,0 +1,32 @@
+The idea is as follows:
+
+#create a new DbAction instance
+import org.ikmich.android.db.*;
+Dbtool dbtool;
+dbtool = new Dbtool(dbName); //or other constructor overload..
+
+#create a database
+SQLiteDatabase db;
+db = dbAction.createDb(dbName);
+
+#create a "products" table...
+db.createTable(new TableProfile("products")
+				.column(new ColumnProfile("productId").type_int().primaryKey().autoIncrement().notNull())
+				.column(new ColumnProfile("name").type_text().notNull().unique()
+				.column(new ColumnProfile("price").type_float().notNull());
+
+#insert values into the table...
+int numRows = (Integer) db.insertInto("products")
+				.set("name", "Robot Arm")
+				.set("price", 7020.00)
+				.run();
+
+#update the table...
+int numRows = (Long) db.update("products")
+				.set("name", "Bionic Seat")
+				.set("price", 9030.00)
+				.whereEquals("name", "Robot Arm")
+				.run();
+
+
+Cursor c = new SelectQuery(db).columns(cols).whereEquals("id", 24).run();

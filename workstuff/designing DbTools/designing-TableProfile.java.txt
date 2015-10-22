@@ -1,0 +1,26 @@
+CREATE TABLE foo (
+	column_name column_type column_constraints
+	id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL
+	col2 TEXT UNIQUE REFERENCES table1(col1)
+);
+
+#data types
+NULL, integer, float, text, blob
+
+#column constraints
+When multiple column constraints are used on a single column, the constraints are listed one after another without commas.
+-> DEFAULT value
+-> NOT NULL
+-> UNIQUE
+[An index will be created for each UNIQUE column. So, there are performance expenses]
+-> CHECK(expression)
+-> PRIMARY KEY
+-> FOREIGN KEY
+
+#other column markers
+-> AUTOINCREMENT (should come before not null)
+
+#table constraints syntax
+-> UNIQUE (column list...)
+-> PRIMARY KEY (column list...)
+-> FOREIGN KEY (column list...)

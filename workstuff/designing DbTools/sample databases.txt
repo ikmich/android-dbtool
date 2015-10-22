@@ -1,0 +1,25 @@
+
+Dbtool.installSampleDb(); //would not install if exists.
+Dbtool.removeSampleDb(); //removes the sample db if exists.
+
+class SampleDbCreator {
+	void createSampleDb() {
+		
+	}
+}
+
+#users
+-> userId
+-> firstName
+-> lastName
+-> username
+-> password
+
+#categories
+-> categoryId
+-> categoryName
+
+#products
+-> productId
+-> categoryId (fk)
+-> 

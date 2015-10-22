@@ -1,0 +1,11 @@
+
+RecordSet rows;
+rows = new RecordSet();
+rows.add(new Record().set("name", "ikmich").set("age", 29).set("sex", "male"));
+rows.add(new Record().set("name", "uju").set("age", 39).set("sex", "female"));
+rows.add(new Record().set("name", "titi").set("age", 26).set("sex", "female"));
+
+dba.insertInto("people").values(rows);
+
+dba.insertInto("people").record(new Record());
+dba.insertInto("people").recordSet(rows);
