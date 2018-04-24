@@ -13,7 +13,7 @@
 	</description>
 
 	<properties>
-		<path.androidJar>C:\android_sdk_android_studio\platforms\android-22\android.jar</path.androidJar>
+		<path.androidJar>/Users/mac/Library/Android/sdk/platforms/android-22/android.jar</path.androidJar>
 	</properties>
 
 	<dependencies>

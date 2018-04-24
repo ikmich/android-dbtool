@@ -6,7 +6,7 @@
 			<attribute name="maven.pomderived" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/android-sdk-windows/platforms/android-9/android.jar" sourcepath="C:/android-sdk-windows/platforms/android-9/android.jar">
+	<classpathentry kind="lib" path="/Users/mac/Library/Android/sdk/platforms/android-22/android.jar" sourcepath="C:/android-sdk-windows/platforms/android-9/android.jar">
 		<attributes>
 			<attribute name="javadoc_location" value="file:/C:/android-sdk-windows/docs/reference/"/>
 		</attributes>
